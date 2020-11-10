@@ -44,7 +44,7 @@ app.post("/", function(req, res){
     if (response.statusCode === 200) {
       res.sendFile(__dirname + "/success.html");
     } else {
-      res.send(__dirname + "/failure.html");
+      res.sendFile(__dirname + "/failure.html");
     }
 
 
@@ -53,7 +53,7 @@ app.post("/", function(req, res){
     })
   })
 
-  // request.write(jsonData);
+  request.write(jsonData);
   request.end();
 
 });
